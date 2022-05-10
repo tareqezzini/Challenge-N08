@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+* 
+{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tesimonials
+{
+    max-width: 1200px;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2, min-content);
+    gap: 20px;
+}
+.tesimonials .box
+{
+    padding: 1.4rem;
+    color: white;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+    border-radius: .8rem;
+}
+.tesimonials .box .head
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.tesimonials .box .avatar img
+{
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.tesimonials .one .avatar img,
+.tesimonials .four .avatar img
+{
+    border-color:hsl(263, 55%, 52%)
+}
+.tesimonials .head h4
+{
+    font-size: .9rem;
+}
+.tesimonials .head span
+{
+    font-size: .7rem;
+    opacity: .6;
+}
+.tesimonials  .three h4,
+.tesimonials  .five  h4
+{
+    color: hsl(219, 29%, 14%);
+}
+.tesimonials .three span,
+.tesimonials .five span
+{
+    color:hsl(217, 19%, 35%);;
+}
+.tesimonials .box p:first-of-type
+{
+   font-size: 1.2rem;
+   margin-bottom: 10px;
+   color: hsl(210, 46%, 95%);
+}
+.tesimonials .box p:last-of-type
+{
+   font-size: .8rem;
+   margin-bottom: 10px;
+   color:hsl(0, 0%, 81%);
+   opacity: .7;
+}
+.tesimonials .three p:first-of-type,
+.tesimonials .five p:first-of-type
+{
+   
+    color:  hsl(219, 29%, 14%);
+}
+.tesimonials .three p:last-of-type,
+.tesimonials .five p:last-of-type
+{
+    color:  hsl(217, 19%, 35%);
+}
+.one
+{
+    background-color: hsl(263, 55%, 52%);
+    grid-column: 1/3;
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: 80% 0;
+}
+.two
+{
+    background-color: hsl(217, 19%, 35%);
+}
+.three
+{
+    background-color: hsl(0, 0%, 100%);
+    grid-row: 2/3;
+}
+.four
+{
+    background-color: hsl(219, 29%, 14%);
+    grid-column: 2/4;
+}
+.five
+{
+    background-color: hsl(0, 0%, 100%);
+    grid-column: 4/5;
+    grid-row: 1/3;
+
+}
+
+@media (max-width:768px) {
+
+    .tesimonials
+    {
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(5,min-content);
+      
+    }
+    .box
+    {
+        grid-column: 1/1;
+    }
+    .five
+    {
+        grid-column: 1/1;
+        grid-row: 5/5;
+
+    }
+    
+}
